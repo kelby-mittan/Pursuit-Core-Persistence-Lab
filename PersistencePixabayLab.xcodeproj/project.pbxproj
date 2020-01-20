@@ -14,6 +14,7 @@
 		026B498623D62AE8006CBE6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 026B498523D62AE8006CBE6A /* Assets.xcassets */; };
 		026B498923D62AE8006CBE6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 026B498723D62AE8006CBE6A /* LaunchScreen.storyboard */; };
 		026B499423D62AE8006CBE6A /* PersistencePixabayLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026B499323D62AE8006CBE6A /* PersistencePixabayLabTests.swift */; };
+		026B49A123D63095006CBE6A /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026B49A023D63095006CBE6A /* APIKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		026B498F23D62AE8006CBE6A /* PersistencePixabayLabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersistencePixabayLabTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		026B499323D62AE8006CBE6A /* PersistencePixabayLabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencePixabayLabTests.swift; sourceTree = "<group>"; };
 		026B499523D62AE8006CBE6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		026B49A023D63095006CBE6A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		026B497023D62AD9006CBE6A = {
 			isa = PBXGroup;
 			children = (
+				026B499F23D62FEE006CBE6A /* APIKey */,
 				026B497B23D62AD9006CBE6A /* PersistencePixabayLab */,
 				026B499223D62AE8006CBE6A /* PersistencePixabayLabTests */,
 				026B497A23D62AD9006CBE6A /* Products */,
@@ -97,6 +100,14 @@
 				026B499523D62AE8006CBE6A /* Info.plist */,
 			);
 			path = PersistencePixabayLabTests;
+			sourceTree = "<group>";
+		};
+		026B499F23D62FEE006CBE6A /* APIKey */ = {
+			isa = PBXGroup;
+			children = (
+				026B49A023D63095006CBE6A /* APIKey.swift */,
+			);
+			path = APIKey;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 			files = (
 				026B498123D62AD9006CBE6A /* ViewController.swift in Sources */,
 				026B497D23D62AD9006CBE6A /* AppDelegate.swift in Sources */,
+				026B49A123D63095006CBE6A /* APIKey.swift in Sources */,
 				026B497F23D62AD9006CBE6A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
