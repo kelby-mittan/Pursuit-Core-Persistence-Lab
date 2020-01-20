@@ -69,6 +69,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="sn8-RD-rgS"/>
+                    <connections>
+                        <outlet property="collectionView" destination="9pg-L0-kQ5" id="SRW-R1-jQ2"/>
+                        <outlet property="searchBar" destination="lNR-qB-h7L" id="k8J-2e-d2h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,6 +103,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bfA-a0-wAH" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Nu-Se-p8u">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
