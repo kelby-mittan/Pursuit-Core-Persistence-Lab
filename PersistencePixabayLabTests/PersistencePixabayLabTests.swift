@@ -11,24 +11,27 @@ import XCTest
 
 class PersistencePixabayLabTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testPixCount() {
+        let exp = XCTestExpectation(description: "searches found")
+        let pixEndpointURL = "https://pixabay.com/api/?key=\(APIKey.key)&q=mountains&image_type=photo"
+        let request = URLRequest(url: URL(string: pixEndpointURL)!)
+        
+        NetworkHelper.shared.performDataTask(with: request) { (result) in
+            switch result {
+            case .failure(let appError):
+                XCTFail("\(appError)")
+            case .success(let data):
+                do {
+                    let searchHits = try JSONDecoder().decode(PixSearch.self, from: data)
+                    let pixHits = searchHits.hits
+                    XCTAssertEqual(pixHits.count, 20, "should be 20")
+                } catch {
+                    XCTFail()
+                }
+                exp.fulfill()
+            }
         }
+        wait(for: [exp], timeout: 5.0)
     }
 
 }

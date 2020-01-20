@@ -24,20 +24,34 @@
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iaQ-zL-3X4">
-                                    <size key="itemSize" width="320" height="283"/>
+                                    <size key="itemSize" width="200" height="150"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pixCell" id="aYT-iz-J20">
-                                        <rect key="frame" x="47" y="0.0" width="320" height="283"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pixCell" id="aYT-iz-J20" customClass="PixCollectionCell" customModule="PersistencePixabayLab" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="u06-29-DQk">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bnS-Uv-xhR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bnS-Uv-xhR" firstAttribute="height" secondItem="u06-29-DQk" secondAttribute="height" id="8da-Ug-mmM"/>
+                                                <constraint firstItem="bnS-Uv-xhR" firstAttribute="centerX" secondItem="u06-29-DQk" secondAttribute="centerX" id="XvP-o1-PmD"/>
+                                                <constraint firstItem="bnS-Uv-xhR" firstAttribute="centerY" secondItem="u06-29-DQk" secondAttribute="centerY" id="hPG-H1-aV6"/>
+                                                <constraint firstItem="bnS-Uv-xhR" firstAttribute="width" secondItem="u06-29-DQk" secondAttribute="width" id="wk3-eg-WhY"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="320" height="283"/>
+                                        <size key="customSize" width="200" height="150"/>
+                                        <connections>
+                                            <outlet property="pixabayImage" destination="bnS-Uv-xhR" id="vRD-MF-XJF"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
