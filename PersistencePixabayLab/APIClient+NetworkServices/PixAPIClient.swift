@@ -13,7 +13,7 @@ struct PixAPIClient {
     
     static func getPix(for search: String, completion: @escaping (Result<[PixImage], AppError>) -> ()) {
         
-        let pixEndpointURL = "https://pixabay.com/api/?key=\(APIKey.key)&q=\(search)&image_type=photo"
+        let pixEndpointURL = "https://pixabay.com/api/?key=\(APIKey.key)&q=\(search)&image_type=photo&per_page=200"
         
         guard let url = URL(string: pixEndpointURL) else {
             completion(.failure(.badURL(pixEndpointURL)))
