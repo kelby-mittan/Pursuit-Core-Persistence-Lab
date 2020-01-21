@@ -21,6 +21,8 @@
 		026B49AC23D63BC7006CBE6A /* PixImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026B49AB23D63BC7006CBE6A /* PixImage.swift */; };
 		026B49AF23D63FA6006CBE6A /* PixAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026B49AE23D63FA6006CBE6A /* PixAPIClient.swift */; };
 		02D8235B23D6535300613587 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8235A23D6535300613587 /* UIViewController+Alerts.swift */; };
+		02D8235D23D7781100613587 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8235C23D7781100613587 /* FileManager.swift */; };
+		02D8235F23D7786D00613587 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8235E23D7786D00613587 /* PersistenceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		026B49AB23D63BC7006CBE6A /* PixImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixImage.swift; sourceTree = "<group>"; };
 		026B49AE23D63FA6006CBE6A /* PixAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixAPIClient.swift; sourceTree = "<group>"; };
 		02D8235A23D6535300613587 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
+		02D8235C23D7781100613587 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		02D8235E23D7786D00613587 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 			children = (
 				026B49AE23D63FA6006CBE6A /* PixAPIClient.swift */,
 				02D8235A23D6535300613587 /* UIViewController+Alerts.swift */,
+				02D8235C23D7781100613587 /* FileManager.swift */,
+				02D8235E23D7786D00613587 /* PersistenceHelper.swift */,
 			);
 			path = "APIClient+NetworkServices";
 			sourceTree = "<group>";
@@ -271,7 +277,9 @@
 				026B49AC23D63BC7006CBE6A /* PixImage.swift in Sources */,
 				026B49A423D63884006CBE6A /* PixCollectionCell.swift in Sources */,
 				026B49A623D638C0006CBE6A /* FavsController.swift in Sources */,
+				02D8235D23D7781100613587 /* FileManager.swift in Sources */,
 				026B49A123D63095006CBE6A /* APIKey.swift in Sources */,
+				02D8235F23D7786D00613587 /* PersistenceHelper.swift in Sources */,
 				026B497F23D62AD9006CBE6A /* SceneDelegate.swift in Sources */,
 				02D8235B23D6535300613587 /* UIViewController+Alerts.swift in Sources */,
 				026B49AF23D63FA6006CBE6A /* PixAPIClient.swift in Sources */,

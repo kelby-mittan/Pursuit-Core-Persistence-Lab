@@ -81,7 +81,7 @@ extension PixSearchController: UICollectionViewDelegateFlowLayout {
         let numberOfItems: CGFloat = 2
         let totalSpacing: CGFloat = numberOfItems * interItemSpacing
         let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
-        let itemHeight: CGFloat = itemWidth + (itemWidth * 0.25)
+        let itemHeight: CGFloat = itemWidth //+ (itemWidth * 0.25)
         
 //        return CGSize(width: itemWidth, height: (itemWidth * 2))
         return CGSize(width: itemWidth, height: itemHeight)
