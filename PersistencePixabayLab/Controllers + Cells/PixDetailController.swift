@@ -18,7 +18,8 @@ class PixDetailController: UIViewController {
     @IBOutlet var postedByLabel: UILabel!
     @IBOutlet var favButton: UIButton!
     
-    var pixImage: PixImage?
+    public var pixImage: PixImage?
+    public var isFavorite = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +50,11 @@ class PixDetailController: UIViewController {
                 }
             }
         }
+        if isFavorite {
+            favButton.setBackgroundImage(UIImage(systemName: "star.fill"), for: .normal)
+        } else {
+            favButton.setBackgroundImage(UIImage(systemName: "star"), for: .normal)
+        }
     }
     
     @IBAction func favButtonPressed(_ sender: UIButton) {
@@ -56,15 +62,26 @@ class PixDetailController: UIViewController {
         guard let pixImage = pixImage else {
             return
         }
-        favButton.setBackgroundImage(UIImage(systemName: "star.fill"), for: .normal)
-        favButton.isEnabled = false
-        
-        do {
-            try PersistenceHelper.createImage(image: pixImage)
-            showAlert(title: "Cool", message: "This Photo Has Been Favorited")
-        } catch {
-            print("could not save \(error)")
+        if isFavorite {
+            favButton.setBackgroundImage(UIImage(systemName: "star"), for: .normal)
+            do {
+                try PersistenceHelper.delete(pix: pixImage)
+                showAlert(title: "Okay", message: "This photo has been deleted from favorites")
+            } catch {
+                print("could not delete \(error)")
+            }
+            isFavorite = false
+        } else {
+            favButton.setBackgroundImage(UIImage(systemName: "star.fill"), for: .normal)
+            do {
+                try PersistenceHelper.createImage(image: pixImage)
+                showAlert(title: "Cool", message: "This photo has been favorited")
+            } catch {
+                print("could not save \(error)")
+            }
+            isFavorite = true
         }
+        
         
     }
     

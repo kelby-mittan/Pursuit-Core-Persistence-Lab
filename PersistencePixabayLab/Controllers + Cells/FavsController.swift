@@ -12,7 +12,14 @@ class FavsController: UIViewController {
     
     @IBOutlet var collectionView: UICollectionView!
     
-    var pixPics = [PixImage]()
+    var pixPics = [PixImage]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.loadPix()
+                self.collectionView.reloadData()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +45,7 @@ class FavsController: UIViewController {
         }
         
         pixVC.pixImage = pixPics[indexPath.row]
+        pixVC.isFavorite = true
     }
     
 }

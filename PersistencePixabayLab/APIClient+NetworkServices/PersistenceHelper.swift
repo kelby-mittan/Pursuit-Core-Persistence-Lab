@@ -68,5 +68,19 @@ class PersistenceHelper {
 
         return pixImages
     }
+    
+    static func delete(pix index: PixImage) throws {
+        
+//        pixImages.remove(at: index)
+        
+        pixImages.removeAll { $0.id == index.id }
+       
+        do {
+            try save()
+        } catch {
+            throw DataPersistenceError.deletingError(error)
+        }
+        
+    }
 }
 

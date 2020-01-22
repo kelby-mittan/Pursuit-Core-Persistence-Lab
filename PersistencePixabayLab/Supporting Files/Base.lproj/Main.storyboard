@@ -156,7 +156,7 @@
                                         <size key="customSize" width="256" height="250"/>
                                         <connections>
                                             <outlet property="pixabayImage" destination="xe4-py-I1E" id="Ccj-ny-C85"/>
-                                            <segue destination="wc4-wH-AgX" kind="show" id="G9H-Xc-LSN"/>
+                                            <segue destination="wc4-wH-AgX" kind="show" id="AO1-i1-3oa"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -300,6 +300,6 @@
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="G9H-Xc-LSN"/>
+        <segue reference="AO1-i1-3oa"/>
     </inferredMetricsTieBreakers>
 </document>
