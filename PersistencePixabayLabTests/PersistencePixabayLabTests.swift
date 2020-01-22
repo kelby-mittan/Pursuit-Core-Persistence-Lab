@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import NetworkHelper
+
 @testable import PersistencePixabayLab
 
 class PersistencePixabayLabTests: XCTestCase {

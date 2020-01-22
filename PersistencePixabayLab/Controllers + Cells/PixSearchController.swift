@@ -53,7 +53,15 @@ class PixSearchController: UIViewController {
                 }
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
+        guard let cell = sender as? UICollectionViewCell, let pixVC = segue.destination as? PixDetailController, let indexPath = collectionView.indexPath(for: cell) else {
+            fatalError("could not load")
+        }
+        
+        pixVC.pixImage = pixPics[indexPath.row]
     }
 
 }

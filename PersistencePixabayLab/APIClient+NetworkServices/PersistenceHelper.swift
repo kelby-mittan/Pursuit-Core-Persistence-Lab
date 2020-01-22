@@ -24,6 +24,13 @@ class PersistenceHelper {
     
     static func createImage(image: PixImage) throws {
         
+        pixImages.append(image)
+        
+        do {
+            try save()
+        } catch {
+            throw DataPersistenceError.savingError(error)
+        }
     }
     
     static func save() throws {

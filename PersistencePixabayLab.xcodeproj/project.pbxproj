@@ -23,6 +23,7 @@
 		02D8235B23D6535300613587 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8235A23D6535300613587 /* UIViewController+Alerts.swift */; };
 		02D8235D23D7781100613587 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8235C23D7781100613587 /* FileManager.swift */; };
 		02D8235F23D7786D00613587 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8235E23D7786D00613587 /* PersistenceHelper.swift */; };
+		02D8236123D77BB300613587 /* PixDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8236023D77BB300613587 /* PixDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		02D8235A23D6535300613587 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		02D8235C23D7781100613587 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		02D8235E23D7786D00613587 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		02D8236023D77BB300613587 /* PixDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				026B498023D62AD9006CBE6A /* PixSearchController.swift */,
 				026B49A323D63884006CBE6A /* PixCollectionCell.swift */,
 				026B49A523D638C0006CBE6A /* FavsController.swift */,
+				02D8236023D77BB300613587 /* PixDetailController.swift */,
 			);
 			path = "Controllers + Cells";
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				026B497D23D62AD9006CBE6A /* AppDelegate.swift in Sources */,
 				026B49AC23D63BC7006CBE6A /* PixImage.swift in Sources */,
 				026B49A423D63884006CBE6A /* PixCollectionCell.swift in Sources */,
+				02D8236123D77BB300613587 /* PixDetailController.swift in Sources */,
 				026B49A623D638C0006CBE6A /* FavsController.swift in Sources */,
 				02D8235D23D7781100613587 /* FileManager.swift in Sources */,
 				026B49A123D63095006CBE6A /* APIKey.swift in Sources */,
