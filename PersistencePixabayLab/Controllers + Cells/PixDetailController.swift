@@ -82,7 +82,6 @@ class PixDetailController: UIViewController {
             isFavorite = true
         }
         
-        
     }
     
 }

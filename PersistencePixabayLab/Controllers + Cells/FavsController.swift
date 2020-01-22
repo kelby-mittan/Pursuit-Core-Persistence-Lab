@@ -15,7 +15,7 @@ class FavsController: UIViewController {
     var pixPics = [PixImage]() {
         didSet {
             DispatchQueue.main.async {
-                self.loadPix()
+//                self.loadPix()
                 self.collectionView.reloadData()
             }
         }
@@ -27,6 +27,10 @@ class FavsController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         loadPix()
     }
     
@@ -68,8 +72,8 @@ extension FavsController: UICollectionViewDataSource {
 
 extension FavsController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let interItemSpacing: CGFloat = 4   // space between items
-        let maxWidth = UIScreen.main.bounds.size.width  // device's width
+        let interItemSpacing: CGFloat = 4
+        let maxWidth = UIScreen.main.bounds.size.width
         let numberOfItems: CGFloat = 2
         let totalSpacing: CGFloat = numberOfItems * interItemSpacing
         let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
